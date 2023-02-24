@@ -48,9 +48,6 @@ def row_to_singer_message(stream, row, version, columns, time_extracted):
                 row_to_persist += (elem,)
             else:
                 row_to_persist += (str(elem),)
-        elif 'number' in property_type or property_type == 'number':
-            number_representation = float(elem)
-            row_to_persist += (number_representation,)
         elif 'integer' in property_type or property_type == 'integer':
             integer_representation = int(elem)
             row_to_persist += (integer_representation,)
